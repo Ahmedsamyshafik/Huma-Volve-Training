@@ -1,0 +1,15 @@
+namespace Store.Data.Entities;
+
+
+public abstract class BaseEntity
+{
+    public int Id { get; set; }
+
+    public DateTime CreatedAt { get; set; }
+
+    public DateTime? ModifiedAt { get; set; }
+
+    public bool IsDeleted { get; set; }
+
+    public byte[] RowVersion { get; set; } = Array.Empty<byte>();
+}
